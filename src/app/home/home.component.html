@@ -1,0 +1,40 @@
+<body class="container md:768px  w-2/5 rounded-2xl background  mx-auto box-border ">
+  <div class="home">
+    <div class="home1 mt-3 underline">
+      <p><a [routerLink]="['/home']" routerLinkActive="router-link-active">Home</a></p>
+      <p> <a [routerLink]="['/list']" routerLinkActive="router-link-active">List</a></p>
+    </div>
+    <div class="home2 mt-3 underline">
+      <p><a [routerLink]="['/logn_in']" routerLinkActive="router-link-active">Logn_In</a></p>
+      <p><a [routerLink]="['/sign_out']" routerLinkActive="router-link-active">Sign_out</a></p>
+    </div>
+  </div>
+  <h1 class="underline pb-5 text-center">List Menu</h1>
+  <form class=" my-2 mb-16" #myForm='ngForm'>
+    <label class="mx-16">Nhập món cần đặt:</label><br /><br />
+    <input class='rounded-xl ml-16 hover:caret-lime-100 w-3/5' type="text" placeholder="Nhap Menu vao..." required
+      [(ngModel)]='addlist' name="addlist" />
+    <button (click)="onClick()" class="mx-5" mat-raised-button color="primary" [disabled]='!myForm.form.valid'
+      type="text">Submit</button>
+    <br />
+    <span class="mx-16 errorMessage" *ngIf="addlist===''">* Cần phải nhập thực đơn</span> <br />
+    <br />
+    <label for="size" class="mx-16">Size:</label>
+    <select [(value)]="valueInSelect" class="rounded-xl" (change)="selectSize($event)">
+      <option *ngFor="let item of size" [value]="item">
+        {{item}}
+      </option>
+    </select>
+    <br />
+    <div *ngIf="valid===false" class="bg-slate-300 w-9/12 h-80 rounded-xl box-content ml-16 mt-10">
+      <div class=" flex bordebottom" *ngFor="let item of pushList">
+        <span class="w-80 pl-6 pt-2 font-medium "> + {{item?.namelist}}</span>
+        <span class="w-60 pl-6 pt-2"> . {{item.list}}</span>
+        <span class="w-8 mt-1"><mat-icon color="disabled" (click)="editlist(item)">mode_edit</mat-icon></span>
+        <span (click)="deleteList(item)" class="w-20 mb-1 mt-1 ml-6">
+          <mat-icon>delete</mat-icon>
+        </span>
+      </div>
+    </div>
+  </form>
+</body>

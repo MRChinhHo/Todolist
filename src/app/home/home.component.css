@@ -1,0 +1,29 @@
+.errorMessage {
+  color: red;
+}
+
+.bordebottom {
+  border-bottom: 1px solid #698269;
+}
+.background {
+  background: #86a3b8;
+}
+.home {
+  display: flex;
+  justify-content: space-between;
+  margin: 5px;
+  align-items: center;
+  color: #3e54ac;
+}
+.home1 {
+  display: flex;
+  justify-content: space-around;
+  width: 20%;
+  margin-left: 50px;
+}
+.home2 {
+  display: flex;
+  justify-content: space-around;
+  width: 30%;
+  margin-right: 50px;
+}

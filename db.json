@@ -1,0 +1,67 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": [
+    {
+      "id": 1,
+      "name": "typicode",
+      "phoneNumber": "typicode",
+      "email": "typicode",
+      "password": "chinh"
+    },
+    {
+      "id": 2,
+      "name": "aaaa",
+      "phoneNumber": "typicode",
+      "email": "typicode",
+      "password": "chinh"
+    },
+    {
+      "id": 3,
+      "name": "cccccccccc",
+      "phoneNumber": "typicode",
+      "email": "typicode",
+      "password": "chinh"
+    },
+    {
+      "name": "hiếu",
+      "phoneNumber": "3014951",
+      "email": "quangchinhho95@gmail.com",
+      "password": "121324343123",
+      "id": 4
+    },
+    {
+      "name": "Ho chinh",
+      "phoneNumber": "0363008199",
+      "email": "chinhhqfx16046@funix.edu.vn",
+      "password": "12345678",
+      "id": 5
+    },
+    {
+      "name": "Ho chinh",
+      "phoneNumber": "0363008199",
+      "email": "quangchinhho95@gmail.com",
+      "password": "123456789",
+      "id": 6
+    },
+    {
+      "name": "ho quang chinh",
+      "phoneNumber": "0363008199",
+      "email": "quangchinh@gmail.com",
+      "password": "123456",
+      "id": 7
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+<div class="main__container">
+    <div class="login-card">
+  
+      <main class="login-content">
+        <span class="login-header">Sign Up</span>
+        <!-- login form -->
+  
+        <form #myForm="ngForm" class="login-form">
+            <input ngModel type="text" autofocus placeholder="Full Name" name="name" class="login-input" required  (change)="inputName($event)">
+            <input ngModel type="number" autofocus placeholder="Phone Number" name="number" class="login-input" required (change)="inputPhoneNumber($event)">
+          <input ngModel type="email" autofocus placeholder="Email" name="email" class="login-input" required (change)="inputEmail($event)">
+          <input ngModel type="password" placeholder="Password" name="password" class="login-input" minlength="6" required (change)="inputPassword($event)">
+          <input type="submit" name="submit" value="SignUp" class="login-btn" (click)="submit(myForm)">
+        </form>
+        <div class="signup-link-wrapper">
+          <span class="signup-notice">You have an account?</span>
+          <a class="signup-link" routerLink="/logn_in">Log In</a>
+        </div>
+  
+      </main>
+  
+      <!-- linking to signup -->
+      <aside class="login-aside">
+        <div class="login-aside-overlay"></div>
+        <h1 class="login-welcome-text">Welcome Back!</h1>
+        <hr class="login-aside-hr">
+      </aside>
+    </div>
+  </div>
+  
+  
