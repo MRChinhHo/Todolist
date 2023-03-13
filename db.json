@@ -1,16 +1,69 @@
 {
-  "posts": [
-    {
-      "id": 1,
-      "title": "json-server",
-      "author": "typicode"
-    }
-  ],
   "comments": [
     {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
+      "namelist": "ada",
+      "list": "TwoPeople",
+      "id": 1
+    },
+    {
+      "namelist": "ada",
+      "list": "Short",
+      "id": 2
+    },
+    {
+      "namelist": "gà bó xôi",
+      "list": "TwoPeople",
+      "id": 3
+    },
+    {
+      "namelist": "thịt vịt nướng",
+      "list": "TwoPeople",
+      "id": 4
+    },
+    {
+      "namelist": "có lóc hấp bầu",
+      "list": "ThirtPeople",
+      "id": 5
+    },
+    {
+      "namelist": "gà hấp hành",
+      "list": "Fullsize",
+      "id": 6
+    },
+    {
+      "namelist": "dad",
+      "list": "TwoPeople",
+      "id": 7
+    },
+    {
+      "namelist": "heo quay",
+      "list": "Short",
+      "id": 8
+    },
+    {
+      "namelist": "adsd",
+      "list": "TwoPeople",
+      "id": 9
+    },
+    {
+      "namelist": "ad",
+      "list": "TwoPeople",
+      "id": 10
+    },
+    {
+      "namelist": "khô bò ",
+      "list": "TwoPeople",
+      "id": 11
+    },
+    {
+      "namelist": "ada",
+      "list": "TwoPeople",
+      "id": 12
+    },
+    {
+      "namelist": "ad",
+      "list": "TwoPeople",
+      "id": 13
     }
   ],
   "profile": [
@@ -62,6 +115,13 @@
       "email": "quangchinh@gmail.com",
       "password": "123456",
       "id": 7
+    },
+    {
+      "name": "ho quang chinh",
+      "phoneNumber": "0363008199",
+      "email": "quangchinhho95@gmail.com",
+      "password": "12345678",
+      "id": 8
     }
   ]
 }

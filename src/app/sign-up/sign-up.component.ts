@@ -45,7 +45,7 @@ export class SignUpComponent implements OnInit {
     email:this.changeEmail,
     password:this.changePassword,
    }
-   this.serverHttp.addPosts(newData).subscribe((data)=>{
+   this.serverHttp.addPosts(newData).subscribe((data:any)=>{
   console.log('post',data)
       this.posts.push(data)
       alert('Đăng ký thành công')
@@ -56,11 +56,9 @@ export class SignUpComponent implements OnInit {
    } 
    
   }
-  
     constructor(private router:Router, private serverHttp:ServerHttpService) {
       
   
-     
     }
   
     ngOnInit() {}

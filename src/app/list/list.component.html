@@ -1,4 +1,41 @@
-<div class="serch-container">
-    <span>Search:</span>
-    <input type="'text"[(ngModel)]="enteredSerchValue"(input)="onSearchTextChange()">
-</div>
+
+<body class="bg-green-300">
+
+<div class=' md:768px  w-2/5 rounded-2xl background  mx-auto '>
+  <form class=" my-2 mb-16" #myForm='ngForm'>
+    <br />
+    <br />
+    <label class="mx-16">Tìm Kiếm Món:</label><br /><br />
+    <input class='rounded-xl ml-16 hover:caret-lime-100 w-3/5' type="text" [(ngModel)]="keyword"
+      (keyup)="search($event)" placeholder="Search..." id="keyword">
+    <br />
+  </form>
+
+  <div  class="bg-slate-300 w-9/12 h-auto rounded-xl box-content ml-16 mt-10">
+    <div class=" flex bordebottom"  *ngFor="let item of filteredData" >
+      <span class="w-80 pl-6 pt-2 font-medium "> - {{item.namelist}}</span>
+      <span class="w-60 pl-6 pt-2"> . {{item.list}}</span>
+    </div>
+    <div  class="images m-6 rounded-3xl " *ngIf="!filterValue"> 
+      <ul>
+      <p class="title">Thịt lụt cà pháo</p>
+     <p class="image1"></p>
+     <p class="title">Cơm chiên trứng</p>
+     <p class="image2"></p>
+    </ul>
+    <ul>
+      <p class="title">Êch núp lùm</p>
+      <p class="image3"></p>
+      <p class="title">Gà hấp lá chanh</p>
+      <p class="image4"></p>
+     </ul>
+      
+   
+    </div>
+    
+  </div>
+  </div>
+
+
+</body>
+

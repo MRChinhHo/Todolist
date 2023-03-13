@@ -1,0 +1,44 @@
+.background {
+  background: #86a3b8;
+}
+.home1 {
+  display: flex;
+  justify-content: space-around;
+  width: 20%;
+  margin-left: 50px;
+}
+
+.images {
+  display: flex;
+}
+.image1 {
+  width: 200px;
+  height: 200px;
+  margin-right: 10px;
+  border-radius: 20px;
+  background: url("../logn-in/images/beat.jpg") no-repeat center center;
+}
+.image2 {
+  width: 190px;
+  height: 200px;
+  margin-right: 10px;
+  border-radius: 20px;
+  background: url("../logn-in/images/egg.jpg") no-repeat center center;
+}
+.image3 {
+  width: 190px;
+  height: 200px;
+  margin-left: 10px;
+  border-radius: 20px;
+  background: url("../logn-in/images/ech.jpg") no-repeat center center;
+}
+.image4 {
+  width: 190px;
+  height: 200px;
+  margin-left: 10px;
+  border-radius: 20px;
+  background: url("../logn-in/images/ga.jpg") no-repeat center center;
+}
+.title {
+  margin-left: 35px;
+}

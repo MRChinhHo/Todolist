@@ -22,8 +22,20 @@ public getProfile():Observable<any>{
   .get<any>(url,this.httpOptions)
   .pipe(catchError(this.handleError))
 }
+public getList():Observable<any>{
+  const url=`${this.REST_API_SERVER}/comments`;
+  return this.http
+  .get<any>(url,this.httpOptions)
+  .pipe(catchError(this.handleError))
+}
 public addPosts(data:any){
   const url=`${this.REST_API_SERVER}/profile`;
+  return this.http
+  .post<any>(url,data,this.httpOptions)
+  .pipe(catchError(this.handleError))
+}
+public addList(data:any){
+  const url=`${this.REST_API_SERVER}/comments`;
   return this.http
   .post<any>(url,data,this.httpOptions)
   .pipe(catchError(this.handleError))

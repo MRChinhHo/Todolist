@@ -1,0 +1,12 @@
+.login-aside {
+  animation: fadein 2.25s ease-in-out;
+  flex: 3 3;
+  display: flex;
+  justify-content: flex-end;
+  flex-flow: column;
+  min-height: 100%;
+  border-radius: 0 10px 10px 0;
+  background: url("../logn-in/images/sushi.jpg") no-repeat center center;
+  background-size: cover;
+  position: relative;
+}

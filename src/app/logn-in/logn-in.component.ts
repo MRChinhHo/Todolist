@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import { Router } from '@angular/router';
 import { ServerHttpService } from '../Services/server-http.service';
-
+import { AuthService } from '../auth.service';
 
 @Component({
   selector: 'app-logn-in',
@@ -24,7 +24,7 @@ public inputPassword(event:any){
 }
 
 public submitLogin(){
-
+this.auth.login();
    this.serverHttp.getProfile().subscribe((data:any)=>{
     console.log('get',data)
     const matchedUser=data.find( (user: any) =>
@@ -41,11 +41,10 @@ public submitLogin(){
      })
   
 }
-  constructor(private router:Router,private serverHttp:ServerHttpService) {
+  constructor(private router:Router,private serverHttp:ServerHttpService,private auth: AuthService) {
   }
 
   ngOnInit() {
-    this.submitLogin()
   }
 
  

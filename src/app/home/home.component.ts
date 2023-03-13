@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import { ServerHttpService } from '../Services/server-http.service';
+
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -16,6 +18,7 @@ export class HomeComponent implements OnInit{
  public pushList: { namelist: string, list: string }[] = [];
  public item:any
  public valueInSelect: any;
+ public posts=[{}]
 //láy dữ liệu từ option
 public selectSize(event:any){
   console.log('Sizepush',event.target.value)
@@ -53,13 +56,21 @@ console.log('addedit',this.addlist,'sizeedit',this.selectedSize)
 public onClick(){
   if(this.addlist && this.selectedSize){
     this.pushList.push({namelist: this.addlist, list: this.selectedSize});
-    console.log('món là:' + this.addlist)
-    console.log('size:' + this.selectedSize)
-    this.valid=false
-    this.setForm();
+    if(this.pushList){
+      this.serverHttp.addList(
+        {namelist: this.addlist, list: this.selectedSize}
+        ).subscribe((data:any)=>{
+        this.posts.push(data)
+        console.log('post',this.posts)
+      this.valid=false
+      this.setForm();
+    })
+   
   }
   console.log(this.pushList)
 }
-ngOnInit(): void {
 }
+ngOnInit(): void {}
+constructor( private serverHttp:ServerHttpService) {}
+
 }

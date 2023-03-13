@@ -14,7 +14,11 @@ import { LognInComponent } from './logn-in/logn-in.component';
 import { ListComponent } from './list/list.component';
 import { SignOutComponent } from './sign-out/sign-out.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
-
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { MatAutocompleteModule } from "@angular/material/autocomplete";
+import { ReactiveFormsModule } from '@angular/forms';
+import {MatGridListModule} from '@angular/material/grid-list';
+import { TestComponent } from './test/test.component';
 
 @NgModule({ 
   declarations: [
@@ -23,7 +27,8 @@ import { SignUpComponent } from './sign-up/sign-up.component';
      LognInComponent,
     ListComponent,
     SignOutComponent,
-    SignUpComponent
+    SignUpComponent,
+    TestComponent
   ],
   imports: [
     BrowserModule,
@@ -34,7 +39,10 @@ import { SignUpComponent } from './sign-up/sign-up.component';
     MatButtonModule,
     FormsModule,
     HttpClientModule,
-  
+    MatSlideToggleModule,
+    MatAutocompleteModule,
+    ReactiveFormsModule,
+    MatGridListModule
   ],
   providers: [],
   bootstrap: [AppComponent]
